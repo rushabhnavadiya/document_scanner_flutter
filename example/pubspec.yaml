@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  advance_pdf_viewer: ^2.0.0
+  advance_pdf_viewer2: ^2.0.5+1
   document_scanner_flutter:
     # When depending on this package from a real application you should use:
     #   document_scanner_flutter: ^x.y.z
@@ -70,3 +70,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+dependency_overrides:
+  platform: ^3.1.5

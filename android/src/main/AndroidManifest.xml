@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.document.scanner.flutter.document_scanner_flutter">
+    package="com.document.scanner.flutter.document_scanner_flutter">
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
@@ -13,6 +14,20 @@
         android:allowBackup="true"
         android:largeHeap="true"
         android:hardwareAccelerated="true">
+
+        <!-- Define FileProvider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- Specify the XML resource file that defines paths for FileProvider -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
         <activity
             android:name="com.document.scanner.flutter.document_scanner_flutter.scanlibrary.ScanActivity"
             android:configChanges="orientation|screenSize"
