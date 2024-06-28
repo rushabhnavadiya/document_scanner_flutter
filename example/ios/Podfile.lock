@@ -1,53 +1,56 @@
 PODS:
-  - advance_pdf_viewer (1.0.5):
+  - advance_pdf_viewer2 (1.0.5):
     - Flutter
   - document_scanner_flutter (0.0.1):
     - Flutter
     - WeScan (>= 0.9)
   - Flutter (1.0.0)
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
-  - path_provider (0.0.1):
+  - FMDB (2.7.11):
+    - FMDB/standard (= 2.7.11)
+  - FMDB/standard (2.7.11)
+  - path_provider_foundation (0.0.1):
     - Flutter
-  - sqflite (0.0.2):
+    - FlutterMacOS
+  - sqflite (0.0.3):
     - Flutter
     - FMDB (>= 2.7.5)
-  - WeScan (1.7.0)
+  - WeScan (3.0.0)
 
 DEPENDENCIES:
-  - advance_pdf_viewer (from `.symlinks/plugins/advance_pdf_viewer/ios`)
+  - advance_pdf_viewer2 (from `.symlinks/plugins/advance_pdf_viewer2/ios`)
   - document_scanner_flutter (from `.symlinks/plugins/document_scanner_flutter/ios`)
   - Flutter (from `Flutter`)
-  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
+  - WeScan (from `.symlinks/plugins/document_scanner_flutter/ios/WeScan-3.0.0`)
 
 SPEC REPOS:
   trunk:
     - FMDB
-    - WeScan
 
 EXTERNAL SOURCES:
-  advance_pdf_viewer:
-    :path: ".symlinks/plugins/advance_pdf_viewer/ios"
+  advance_pdf_viewer2:
+    :path: ".symlinks/plugins/advance_pdf_viewer2/ios"
   document_scanner_flutter:
     :path: ".symlinks/plugins/document_scanner_flutter/ios"
   Flutter:
     :path: Flutter
-  path_provider:
-    :path: ".symlinks/plugins/path_provider/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
   sqflite:
     :path: ".symlinks/plugins/sqflite/ios"
+  WeScan:
+    :path: ".symlinks/plugins/document_scanner_flutter/ios/WeScan-3.0.0"
 
 SPEC CHECKSUMS:
-  advance_pdf_viewer: 5c832f382b4ca84fe735f893b7e91aa830c27d7b
+  advance_pdf_viewer2: e4df833fc3120011b681eb2fa2fb780a3e85f6c3
   document_scanner_flutter: cbbff63c2e3060e0593729cea2596120b62e794c
-  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
-  sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
-  WeScan: fed582f6c38014d529afb5aa9ffd1bad38fc72b7
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  FMDB: 57486c1117fd8e0e6b947b2f54c3f42bf8e57a4e
+  path_provider_foundation: 29f094ae23ebbca9d3d0cec13889cd9060c0e943
+  sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
+  WeScan: f50277f7304d146d9ebc4ebdc1b587df84dcdd8b
 
-PODFILE CHECKSUM: 4ed0ca5a94a4955c056ea607941f977e176580d4
+PODFILE CHECKSUM: 13cb6ba44adddf7f9dcf2a721c2af0b58c868423
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.15.2
