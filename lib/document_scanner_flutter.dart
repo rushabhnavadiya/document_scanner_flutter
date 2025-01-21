@@ -33,7 +33,7 @@ class DocumentScannerFlutter {
   }
 static Future<File?>? launchImage(BuildContext context,
       {ScannerFileSource source, String? imagePath,
-      Map<dynamic, String> labelsConfig = const {}}) {
+      Map<dynamic, String> labelsConfig = const {}}) async {
     Map<String, String?> finalAndroidArgs = {};
     for (var entry in labelsConfig.entries) {
       finalAndroidArgs[describeEnum(entry.key)] = entry.value;
