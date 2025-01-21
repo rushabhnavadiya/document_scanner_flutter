@@ -31,7 +31,26 @@ class DocumentScannerFlutter {
       return File(path);
     }
   }
+static Future<File?>? launchImage(BuildContext context,
+      {ScannerFileSource source, String? imagePath,
+      Map<dynamic, String> labelsConfig = const {}}) {
+    Map<String, String?> finalAndroidArgs = {};
+    for (var entry in labelsConfig.entries) {
+      finalAndroidArgs[describeEnum(entry.key)] = entry.value;
+    }
+      finalAndroidArgs["imagePath"] = imagePath;
 
+    String? path = await _channel.invokeMethod(
+        describeEnum(source).toLowerCase(), finalAndroidArgs);
+    if (path == null) {
+      return null;
+    } else {
+      if (Platform.isIOS) {
+        path = path.split('file://')[1];
+      }
+      return File(path);
+    }
+}
   /// Scanner to generate PDF file from scanned images
   ///
   /// `context` : BuildContext to attach PDF generation widgets
