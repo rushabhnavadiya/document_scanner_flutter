@@ -1,5 +1,5 @@
 /// To Configure File source to get Image from
-enum ScannerFileSource { CAMERA, GALLERY }
+enum ScannerFileSource { CAMERA, GALLERY, IMAGE }
 
 /// To configure Android Scanner Labels
 enum ScannerLabelsConfig {
