@@ -69,6 +69,8 @@ class DocumentScannerFlutterPlugin : FlutterPlugin, MethodCallHandler, ActivityA
         when (call.method) {
             "camera" -> openCamera()
             "gallery" -> openGallery()
+            "image" -> openGalleryWithImagePath(call.argument("imagePath").toString())
+
             else -> result.notImplemented()
         }
     }
@@ -84,7 +86,12 @@ class DocumentScannerFlutterPlugin : FlutterPlugin, MethodCallHandler, ActivityA
         intent.putExtra(ScanConstants.OPEN_INTENT_PREFERENCE, ScanConstants.OPEN_MEDIA)
         startActivityForResult(intent, REQUEST_CODE_GALLERY)
     }
-
+    private fun openGalleryWithImagePath(imagePath: String) {
+        val intent = Intent(context, ScanActivity::class.java)
+        intent.putExtra(ScanConstants.OPEN_INTENT_PREFERENCE, ScanConstants.OPEN_MEDIA)
+        intent.putExtra(ScanConstants.EXTRA_IMAGE_PATH, imagePath) // Pass the image path here
+        startActivityForResult(intent, REQUEST_CODE_GALLERY)
+    }
     private fun startActivityForResult(intent: Intent, requestCode: Int) {
         activity?.startActivityForResult(intent, requestCode)
     }
